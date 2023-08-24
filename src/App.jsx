@@ -1,22 +1,16 @@
-import { modals } from "./components/Modals";
-import useModals from "./hooks/useModals";
+import { useState } from "react";
+import DragAndDrop from "./components/dragAndDrop/DragAndDrop";
 
 function App() {
-  const { openModal } = useModals();
-
-  const handleClick = () => {
-    openModal(modals.Modal, {
-      onSubmit: (value) => {
-        console.log(value);
-        console.log("비지니스 로직 처리");
-      },
-    });
-  };
-  return (
-    <>
-      <button onClick={handleClick}>모달 열기</button>
-    </>
-  );
+  const [list, setList] = useState([
+    "Item 1",
+    "Item 2",
+    "Item 3",
+    "Item 4",
+    "Item 5",
+    "Item 6",
+  ]);
+  return <DragAndDrop list={list} setList={setList} />;
 }
 
 export default App;

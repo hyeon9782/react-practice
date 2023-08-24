@@ -2,7 +2,7 @@ import { useContext } from "react";
 import {
   ModalsDispatchContext,
   ModalsStateContext,
-} from "../context/ModalsContext";
+} from "../../context/ModalsContext";
 import Modal from "./Modal";
 
 export const modals = {

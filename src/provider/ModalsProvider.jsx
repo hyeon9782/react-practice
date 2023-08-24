@@ -3,7 +3,7 @@ import {
   ModalsDispatchContext,
   ModalsStateContext,
 } from "../context/ModalsContext";
-import Modals from "../components/Modals";
+import Modals from "../components/modal/Modals";
 
 const ModalsProvider = ({ children }) => {
   const [openedModals, setOpenedModals] = useState([]);
